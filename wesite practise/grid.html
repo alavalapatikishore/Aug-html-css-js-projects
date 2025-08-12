@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Demo</title>
+    <style>
+        .one {
+            background-color: beige;
+            padding: 10px;
+        }
+
+        .two {
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .first-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 20px;
+            margin-right: 20px;
+            column-gap: 20px;
+            row-gap: 20px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- We'll create these grids dynamically -->
+    <div id="container"></div>
+
+    <script>
+        // Array of grids
+        const gridsData = [
+            [
+                { text: "div1", class: "one" },
+                { text: "div2", class: "two" },
+                { text: "div1", class: "one" },
+                { text: "div2", class: "two" }
+            ],
+            [
+                { text: "apple", class: "one" },
+                { text: "banana", class: "two" },
+                { text: "grapes", class: "one" },
+                { text: "orange", class: "two" }
+            ],
+            [
+                { text: "HTML", class: "one" },
+                { text: "CSS", class: "two" },
+                { text: "JavaScript", class: "one" },
+                { text: "ServiceNow", class: "two" }
+            ]
+        ];
+
+        const container = document.getElementById("container");
+
+        gridsData.forEach(gridItems => {
+            const grid = document.createElement("div");
+            grid.classList.add("first-grid");
+
+            gridItems.forEach(item => {
+                const div = document.createElement("div");
+                div.classList.add(item.class);
+                div.textContent = item.text;
+                grid.appendChild(div);
+            });
+
+            container.appendChild(grid);
+        });
+    </script>
+</body>
+</html>

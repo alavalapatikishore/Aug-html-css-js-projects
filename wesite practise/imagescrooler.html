@@ -1,0 +1,148 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div class="product">
+  <div class="image-slider">
+    <button class="arrow left" onclick="prevImage(0)">&#10094;</button>
+    <img id="product-image-0" src="images/product1-1.jpg" alt="Product">
+    <button class="arrow right" onclick="nextImage(0)">&#10095;</button>
+  </div>
+  <p class="product-name">Basketball</p>
+</div>
+
+<style>
+.image-slider {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.arrow.left { left: 0; }
+.arrow.right { right: 0; }
+</style>
+
+<script>
+const productImages = [
+  ["images/product1-1.jpg", "images/product1-2.jpg", "images/product1-3.jpg"], // product 0
+  ["images/product2-1.jpg", "images/product2-2.jpg"] // product 1
+];
+
+let currentImageIndex = [0, 0]; // track current image per product
+
+function showImage(productIndex) {
+  document.getElementById(`product-image-${productIndex}`).src =
+    productImages[productIndex][currentImageIndex[productIndex]];
+}
+
+function nextImage(productIndex) {
+  currentImageIndex[productIndex] =
+    (currentImageIndex[productIndex] + 1) % productImages[productIndex].length;
+  showImage(productIndex);
+}
+
+function prevImage(productIndex) {
+  currentImageIndex[productIndex] =
+    (currentImageIndex[productIndex] - 1 + productImages[productIndex].length) %
+    productImages[productIndex].length;
+  showImage(productIndex);
+}
+</script>
+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div class="product">
+  <div class="image-slider">
+    <button class="arrow left" onclick="prevImage(0)">&#10094;</button>
+    <img id="product-image-0" src="images/product1-1.jpg" alt="Product">
+    <button class="arrow right" onclick="nextImage(0)">&#10095;</button>
+  </div>
+  <p class="product-name">Basketball</p>
+</div>
+
+<style>
+.image-slider {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.arrow.left { left: 0; }
+.arrow.right { right: 0; }
+</style>
+
+<script>
+const productImages = [
+  ["images/product1-1.jpg", "images/product1-2.jpg", "images/product1-3.jpg"], // product 0
+  ["images/product2-1.jpg", "images/product2-2.jpg"] // product 1
+];
+
+let currentImageIndex = [0, 0]; // track current image per product
+
+function showImage(productIndex) {
+  document.getElementById(`product-image-${productIndex}`).src =
+    productImages[productIndex][currentImageIndex[productIndex]];
+}
+
+function nextImage(productIndex) {
+  currentImageIndex[productIndex] =
+    (currentImageIndex[productIndex] + 1) % productImages[productIndex].length;
+  showImage(productIndex);
+}
+
+function prevImage(productIndex) {
+  currentImageIndex[productIndex] =
+    (currentImageIndex[productIndex] - 1 + productImages[productIndex].length) %
+    productImages[productIndex].length;
+  showImage(productIndex);
+}
+</script>
+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+>>>>>>> a0ffb45dca0c4b49ff20f9feed49af82b8859547
+</html>

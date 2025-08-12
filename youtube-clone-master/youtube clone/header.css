@@ -1,0 +1,96 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    margin-bottom: 25px;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+    z-index: 10;
+
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+.left-menu{
+      height: 24px;
+      margin-right: 20px;
+      margin-left: 20px;
+}
+.left-logo{
+height: 24px;
+}
+.search-bar{
+    font-size: medium;
+    flex: 1;
+    height: 32px;
+    padding-left: 10px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.middle{
+    width: 600px;
+    margin-left: 200px;
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+}
+.search-btn{
+ width: 45px;
+ height: 36px; 
+ margin-left: 0px;
+}
+.voice-btn{
+ width: 40px;
+ height: 36px;
+ margin-left: 15px;
+ border-radius: 20px;
+ border-style: none;
+}
+.right{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.right-upload{
+    height: 30px;
+}
+
+.right-apps{
+height: 30px;
+}
+
+.right-noti{
+height: 30px;
+}
+
+.right-profile{
+height: 30px;
+}
+
+.notification-set{
+    position: relative;
+}
+.noti-number3{
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 50%;
+    top: -6px;
+    right: -3px;
+}

@@ -1,0 +1,73 @@
+.thumbnail{
+    width: 100%;
+} 
+.p1, .p2, .p3{
+    display: inline-block;
+}
+
+.grid{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   column-gap: 20px;
+   row-gap: 20px;
+    
+}
+
+.box{
+    width: 100%;
+    text-align: justify;
+    margin-right: 15px;
+}
+p{
+    margin-top: 0;
+}
+.p1{
+   font-size: 15px;
+   font-weight: bold;
+   color: rgb(35, 35, 63);
+   
+}
+.p2, .p3{
+    display: block;
+    font-size: 10px;
+    color: rgb(19, 24, 19);
+}
+
+
+.protext{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 10px;
+}
+
+.proimg{
+    width: 50px;
+    border-radius: 50px;
+}
+
+.thumb{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.absolute{
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 7px;
+    bottom: 10px;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .p1 {
+        font-size: 14px;
+    }
+    .p2, .p3 {
+        font-size: 9px;
+    }
+} 
